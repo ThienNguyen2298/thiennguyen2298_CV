@@ -4,7 +4,6 @@ document.querySelectorAll('.full_info_wrap .tabs ul li').forEach(item => {
     item.addEventListener('click', e => {
         [...document.querySelectorAll('.full_info_wrap .tabs ul li')].map(ele => ele.classList.remove('active'));
         e.target.classList = "active";
-        console.log(e.target.dataset.li);
         [...document.querySelectorAll('.full_info_item')].map(e => e.style.display = 'none')
         document.querySelector(`.${e.target.dataset.li}`).style.display ="block";
         
